@@ -1,18 +1,26 @@
 
-1. O que s�o sistemas embarcados?
+1. O que são sistemas embarcados?
 
-
-2. O que s�o sistemas microprocessados?
-
-
-
-3. Apresente aplica��es de sistemas embarcados: a) para a ind�stria automotiva: b) para eletrodom�stios; c) para automa��o industrial.
+-Os sistemas embarcados são resposáveis por realizar determinadas tarefas com requisitos específicos repetidas vezes. Possuem as características de um computador, o que permite maior portabilidade e menor ocupação de espaço.
 
 
 
-4. Cite arquiteturas poss�veis e as diferen�as entre elas.
+2. O que são sistemas microprocessados?
+
+-Os sistemas microprocessados são  circuitos integrados compactos que realizam as principais funções de um PC
+
+3. Apresente aplicações de sistemas embarcados: a) para a indústria automotiva: b) para eletrodoméstios; c) para automação industrial.
+
+a)  Os sistemas de sensor de ré, os freios abs, sistema de transmissão e injeção eletrônica entre outros. b) roteadores de internet, smart Tvs, geladeiras, microondas, entre outros que possuem sistemas embarcados c) A área de robótica, automação, entre outros, pela dificuldade de se utilizar um sistema operacional pronto nesses ambientes.
+
+
+4. Cite arquiteturas possíveis e as diferenças entre elas.
+
+- Havard architecture - além da CPU possui um sistem com memórias RAM e ROM de acesso distintos e independentes, a memória RAM (acesso aleatório) é volátil, ou seja, pode ser alterada a qualquer momento, já a memória ROM (apenas leitura) é não=volátil.Essa separação permite a leitura simultânea de dados Von Neumann architecture - possui uma CPU ligada a memória RAM e ROM simultânemanete, ou seja, os blocos de memória são dependentes e interligados em um único espaço de memória, o que a torna menos eficiênte.
 
 
 
+5. Por que usamos o MSP430 na disciplina, ao invés de outro microcontrolador?
 
-5. Por que usamos o MSP430 na disciplina, ao inv�s de outro microcontrolador?
+
+- porque o MSP430 está mais próximo do que se utiliza no mercado, tendo em vista a maior eficiência se tratando de otimização de espaço e memória e menor consumo de energia, apesar disso apresenta a mesma funcionalidade do arduino por exemplo.
