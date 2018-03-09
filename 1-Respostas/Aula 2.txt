@@ -1,0 +1,19 @@
+1) O Barramento de endereços pode ter mais bits que o barramento de dados.
+
+
+2)RAM: Volátil, perde o conteúdo quando acaba a energia.
+  ROM: Não volátil, não perde o conteúdo quando acaba a energia, porém a escrita é bem mais lenta que a RAM
+
+
+3) a) A variável i é armazenada na memória RAM, pois terá seu valor alterado várias vezes durante a execução.
+   b) Na memória ROM, pois é desejável que se possa utilizar o programa após um eventual desligamento.
+
+
+4) Harvard: Permite leitura simultânea de dados e do programa, permite barramento de dados e programa separadamente
+otimizados.
+Von Neumann: possúi um sistema único de memória e apesar de ocupar menos espaço acaba tomando muito tempo para processar os dados e o consumo de energia é maior.
+
+5) a) little endian: 0xDC 0xBA 0x15 0x80
+   b) big endian: 0x80 0x51 0xAB 0xCD
+
+6) A tranferência acontece com bytes ou palavras de 2 em 2 bits, o seu endereço é dado pelo byte no endereço menor( sempre par) e pode ser lida em um ciclo de clock do barramento.
