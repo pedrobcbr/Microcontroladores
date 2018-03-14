@@ -1,0 +1,105 @@
+1)
+a)  A |= BIT0;
+b)  A |= BIT0 + BIT1;
+c)  A &=~ BIT2;
+d)  A &=~ (BIT2 + BIT3);
+e)  A ~ BIT7;
+f)  A ~(BIT7 + BIT6 + BIT5 + BIT4) A|= ( BIT3 + BIT2 + BIT1 + BIT0); 
+
+
+2) include<msp430g2553.h>
+   
+   int main(void)
+   {
+
+   WDTCTL = WDTPW|WDTHOLD;
+   PDIR = 0x41;
+   PIOUT = 0x41;
+
+   for(;;){
+}
+}
+
+3) include<msp430g2553.h>
+     #define BTN BIT2
+     #define LED1 BIT0;
+     #define LED2 BIT6;
+   int main(void){
+    WDTCTL = WDTPW|WDTHOLD;
+    PIOUT = 0;
+    PIDIR = LED1 + LED2;
+    for(;;){
+     if(PIIN & BTN == 0){
+
+        PIOUT |= LED1 + LED2;
+        else{
+         PIOUT &= ~(LED1 + LED2);
+
+}
+
+}
+
+}
+
+}
+
+ 4)
+
+#include <msp450g2553.h> 
+#define LEDS=(BIT1+BIT0) /*(bitx + bity) /
+ #define BTN=0 / AUXILIAR */ 
+int main (void) 
+{ WDTCTL= WDTPW + WDTHOLD;
+ PIOUT=0; 
+PIDIR= LEDS; 
+FOR(;;) {
+ WHILE(BTN < 2){ 
+PIOUT~LEDS; BTN++; }
+}
+ }
+
+ 5) #include <msp450g2553.h>
+ #define LEDS=(BIT1 +BIT0) /*(bitx + bity) /
+ #define BTN=0 / AUXILIAR */
+ uma_vez () { WDTCTL= WDTPW + WDTHOLD; PIOUT=0; PIDIR= LEDS; FOR(;;) { WHILE(BTN < 2){ PIOUT~LEDS; BTN++; }
+} } int main (void) { 
+WDTCTL= WDTPW + WDTHOLD;
+ BTN2=0; 
+PIOUT=0; 
+PIDIR= LEDS; 
+FOR(;;) { 
+WHILE(BTN2<2){ 
+uma_vez ()
+ BTN2++; } 
+}
+
+ 6) #include <msp450g2553.h> 
+#define LEDS = ( BIT1 + BIT0) 
+#define BTN = 0
+
+uma_vez() { 
+WDTCTL= WDTPW + WDTHOLD;
+ PIOUT=0;
+ PIDIR= LEDS;
+ FOR(;;) { 
+WHILE(BTN < 2){
+ PIOUT~LEDS; BTN++; }
+} 
+} int main(void) 
+WDTCTL= WDTPW + WDTHOLD; 
+PIOUT=0; 
+BTN2=0;
+ PIDIR= LEDS; 
+FOR(;;) {
+ WHILE(P1IN & BTN2<2){ led_uma_vez (); BTN2++; } 
+}
+
+
+
+
+
+
+
+
+
+
