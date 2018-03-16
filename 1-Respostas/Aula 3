@@ -25,22 +25,24 @@ f)  A ~(BIT7 + BIT6 + BIT5 + BIT4) A|= ( BIT3 + BIT2 + BIT1 + BIT0);
      #define LED1 BIT0;
      #define LED2 BIT6;
    int main(void){
+    
     WDTCTL = WDTPW|WDTHOLD;
-    PIOUT = 0;
-    PIDIR = LED1 + LED2;
+    P1OUT = 0;
+    P1DIR = LED1 + LED2;
+    
     for(;;){
-     if(PIIN & BTN == 0){
-
-        PIOUT |= LED1 + LED2;
-        else{
-         PIOUT &= ~(LED1 + LED2);
-
+    while(P1IN & BTN != 0){}
+      P1OUT |= LED1 + LED2;
+      BTN = 1;
+    if(BTN == 1){
+      P1OUT &=~ (LED1 + LED2);
+      BTN = 0;
+    }if(BTN == 0){
+       P1OUT |= (LED1 + LED2);
+       BTN = 1;
+    }
+     
 }
-
-}
-
-}
-
 }
 
  4)
