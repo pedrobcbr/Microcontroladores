@@ -35,18 +35,33 @@ c) j-=2;
 
 
 3) 
-    a) f *= 2
-
-rla.w R4
+ a) f *= 2
+ add.w R4,R4;
+ 
+ 
+     
 
 b) g *= 3
 
-clr.w R4;
+mov.w R5,R11;
+add.w R5,R5;
+add.w R11,R5;
 
-add.w R5,R4; 
-add.w R5,R4; 
-add.w R5,R4; 
-mov.w R4,R5;
+d)
+mov.w 2(R9), R12;
+mov.w 0(R9), R13;
+add.w R13,R12;
+mov.w R12, 4(R9)
+
+e)
+   add.w R4,R4;
+   mov.w R6,R14;
+   add.w R6,R6;
+   add.w R14,R6;
+   add.w R14,R6;
+   sub.w R6,R4;
+   mov.w R4,6(R9);
+
 
 
 
